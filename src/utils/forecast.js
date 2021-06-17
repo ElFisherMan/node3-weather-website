@@ -13,7 +13,8 @@ const forecast = (longtitude, latitude, callback) => {
             const location = body.location
             callback(undefined, {
                 forecast:`It is currently ${weather.temperature} degrees out, There is a ${weather.precip*100}% chance of rain`,
-                location: `${location.name}, ${location.country}`
+                location: `${location.name}, ${location.country}`,
+                feelsLike: `It actually feels like ${weather.feelslike} degrees`
             })
         }
     })
